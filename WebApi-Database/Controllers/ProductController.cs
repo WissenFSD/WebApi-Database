@@ -23,7 +23,7 @@ namespace WebApi_Database.Controllers
 		[HttpGet("Detail")]
 		public IActionResult GetById(int id)
 		{
-			var result = _context.Products.Where(s => s.ProductId == id).ToList();
+			var result = _context.Products.Where(s => s.ProductId == id).FirstOrDefault();
 			return Ok(result);
 		}
 		[HttpGet("Color")]
