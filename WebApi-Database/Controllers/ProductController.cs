@@ -20,7 +20,7 @@ namespace WebApi_Database.Controllers
 			return Ok(result);
 
 		}
-		[HttpGet]
+		[HttpGet("Detail")]
 		public IActionResult GetById(int id)
 		{
 			var result = _context.Products.Where(s => s.ProductId == id).ToList();
