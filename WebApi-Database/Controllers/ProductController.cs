@@ -26,5 +26,11 @@ namespace WebApi_Database.Controllers
 			var result = _context.Products.Where(s => s.ProductId == id).ToList();
 			return Ok(result);
 		}
+		[HttpGet("Color")]
+		public IActionResult FilterColor(string color)
+		{
+			var result =_context.Products.Where(s => s.Color == color).ToList();
+			return Ok(result);
+		}
 	}
 }
